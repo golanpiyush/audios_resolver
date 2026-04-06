@@ -66,18 +66,18 @@ class AudioResolverResult extends Equatable {
 
   @override
   List<Object?> get props => [
-        videoId,
-        url,
-        itag,
-        mimeType,
-        codec,
-        bitrate,
-        contentLength,
-        loudnessDb,
-        clientUsed,
-        userAgent,
-        expiresAt,
-      ];
+    videoId,
+    url,
+    itag,
+    mimeType,
+    codec,
+    bitrate,
+    contentLength,
+    loudnessDb,
+    clientUsed,
+    userAgent,
+    expiresAt,
+  ];
 
   @override
   String toString() {
