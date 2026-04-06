@@ -9,7 +9,8 @@ homepage: https://github.com/golanpiyush/audios_resolver
 
 # Add this section to hide false positive API key warnings
 false_secrets:
-  - android/.*/AudiosResolver.kt
+  false_secrets:
+  - /android/src/main/kotlin/com/golanpiyush/audios_resolver/AudiosResolver.kt
   - lib/.*\.dart
 
 environment:
