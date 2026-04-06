@@ -1,3 +1,9 @@
+
+## 1.0.1
+
+### Fixed
+- Resolved name conflicts with existing pub.dev packages
+
 ## 1.0.0
 
 ### Added

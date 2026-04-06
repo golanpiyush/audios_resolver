@@ -3,7 +3,7 @@ description: >
   Cross-platform audio URL resolver for YouTube/YTMusic via InnerTube
   Android clients. Resolves direct streaming URLs with codec, bitrate,
   and expiry metadata. Supports single and batch resolution.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/golanpiyush/audios_resolver
 
 false_secrets:
