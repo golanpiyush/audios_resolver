@@ -11,7 +11,7 @@ homepage: https://github.com/golanpiyush/audios_resolver
 false_secrets:
   false_secrets:
   - /android/src/main/kotlin/com/golanpiyush/audios_resolver/AudiosResolver.kt
-  - lib/.*\.dart
+  
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
