@@ -7,11 +7,8 @@ description: >
 version: 0.1.0
 homepage: https://github.com/golanpiyush/audios_resolver
 
-# Add this section to hide false positive API key warnings
 false_secrets:
-  false_secrets:
-  - /android/src/main/kotlin/com/golanpiyush/audios_resolver/AudiosResolver.kt
-  
+  - android/src/main/kotlin/com/golanpiyush/audios_resolver/AudiosResolver.kt
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -37,4 +34,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  # flutter_web_plugins:
