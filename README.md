@@ -6,7 +6,7 @@ Resolves YouTube video IDs to direct audio stream URLs via InnerTube Android cli
 
 ```yaml
 dependencies:
-  audios_resolver: ^0.1.0
+  audios_resolver: ^1.0.0
 ```
 
 ## Usage
