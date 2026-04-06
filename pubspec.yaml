@@ -1,0 +1,33 @@
+name: audios_resolver
+description: >
+  Cross-platform audio URL resolver for YouTube/YTMusic via InnerTube
+  Android clients. Resolves direct streaming URLs with codec, bitrate,
+  and expiry metadata. Supports single and batch resolution with
+  auto-fallback between InnerTube and YTMusicAPI backends.
+version: 0.1.0
+homepage: https://github.com/golanpiyush/audios_resolver
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.golanpiyush.audios_resolver
+        pluginClass: AudiosResolverPlugin
+      ios:
+        pluginClass: AudiosResolverPlugin
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
+  http: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  # flutter_web_plugins: 

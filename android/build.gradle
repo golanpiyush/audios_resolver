@@ -1,0 +1,89 @@
+group = "com.golanpiyush.audios_resolver"
+version = "1.0-SNAPSHOT"
+
+buildscript {
+    ext.kotlin_version = "2.2.20"
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.11.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+android {
+    namespace "com.golanpiyush.audios_resolver"
+    compileSdk 36
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    defaultConfig {
+        minSdk 24
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+
+            outputs.upToDateWhen { false }
+
+            testLogging {
+                events "passed", "skipped", "failed", "standardOut", "standardError"
+                showStandardStreams = true
+            }
+        }
+    }
+}
+
+dependencies {
+    def ktor_version = "3.4.1"
+
+    // Ktor core
+    implementation "io.ktor:ktor-client-core:$ktor_version"
+
+
+    implementation "io.ktor:ktor-client-okhttp:$ktor_version"
+
+    // JSON + serialization
+    implementation "io.ktor:ktor-client-content-negotiation:$ktor_version"
+    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktor_version"
+
+    // Kotlin serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
+
+    // Coroutines (needed for Dispatchers.Main + IO)
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+
+    // Optional (but safe since OkHttp engine uses it internally)
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
+
+    // tests
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testImplementation "org.mockito:mockito-core:5.0.0"
+}
